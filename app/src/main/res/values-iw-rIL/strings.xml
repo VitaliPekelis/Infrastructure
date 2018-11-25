@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">אפליקציה שלי</string>
+    <string name="can_not_be_empty">לא יכול להיות ריק</string>
+    <string name="sign_up_password_helper_text">אורך 8, אותיות רישיות וקטנות ומספרים</string>
+</resources>

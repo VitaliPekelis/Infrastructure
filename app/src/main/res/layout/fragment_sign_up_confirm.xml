@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@android:color/background_light"
+    tools:context=".SignUpConfirmFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_Register"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <TextView
+                android:id="@+id/signUp_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="אשר את החשבון שלך"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </android.support.v7.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/sign_up_conform_sanded_to_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Request for a confirmation code or confirm with the code you already have."
+        />
+
+    <TextView
+        android:id="@+id/textViewConfirmSubtext_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Please enter the code below to confirm your account."
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sign_up_conform_username_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/MyApp.TextInputLayout"
+        app:boxCornerRadiusTopStart="16dp"
+        android:layout_margin="16dp"
+        android:maxLines="1"
+        android:hint="שם משתמש">
+
+        <com.madanes.myapp.views.CleanableTextInputEditText
+            android:id="@+id/sign_up_conform_username_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:cleanable_icon = "@drawable/ic_close_black_24dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/sign_up_conform_code_til"
+        style="@style/MyApp.TextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="קוד אימות"
+        android:maxLines="1"
+        app:boxCornerRadiusTopStart="16dp">
+
+        <com.madanes.myapp.views.CleanableTextInputEditText
+            android:id="@+id/sign_up_conform_code_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            app:cleanable_icon="@drawable/ic_close_black_24dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_up_conform_send_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="להירשם"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sign_up_conform_resend_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_gravity="end"
+        android:text="שלח קוד שוב"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Dialog"/>
+
+</LinearLayout>

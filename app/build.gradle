@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.madanes.myapp"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+
+        resValue "string", "userPoolId", USER_POOL_ID
+        resValue "string", "clientId", CLIENT_ID
+        resValue "string", "clientSecret", CLIENT_SEKRET
+    }
+    buildTypes {
+        debug {
+            minifyEnabled true  // shrink code
+            useProguard false   // don't obfuscate
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true  // shrink code
+            useProguard true    // obfuscate
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+
+    api "com.google.android.material:material:1.0.0"
+
+    /*implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$rootProject.kotlin_version"*/
+    api "com.squareup.retrofit2:retrofit:$rootProject.retrofit2_version"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.retrofit2_version"
+    /*AWS*/
+    implementation "com.amazonaws:aws-android-sdk-cognitoidentityprovider:$rootProject.cognitoIdentityProviderVersion"
+
+    /*Kotlin extension*/
+    implementation "androidx.core:core-ktx:$rootProject.androidxVersion"
+    implementation "androidx.fragment:fragment-ktx:$rootProject.androidxVersion"
+    implementation "androidx.collection:collection-ktx:$rootProject.androidxVersion"
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0-beta01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-beta01'
+
+}

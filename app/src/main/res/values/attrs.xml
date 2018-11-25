@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="cleanable_text_input_edit_text">
+        <attr name="cleanable_icon" format="reference" />
+    </declare-styleable>
+</resources>

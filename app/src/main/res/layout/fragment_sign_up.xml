@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.internal.ForegroundLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".SignUpFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_Register"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+
+            <TextView
+                android:id="@+id/signUp_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="הרשמה"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </android.support.v7.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/user_name_til"
+                style="@style/MyApp.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="8dp"
+                android:hint="שם משתמש"
+                android:maxLines="1"
+                app:boxCornerRadiusTopStart="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:counterTextAppearance="@style/CounterText">
+
+                <com.madanes.myapp.views.CleanableTextInputEditText
+                    android:id="@+id/user_name_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    app:cleanable_icon="@drawable/ic_close_black_24dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sign_up_password_til"
+                style="@style/MyApp.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="8dp"
+                android:hint="סיסמה"
+                android:maxLines="1"
+                app:boxCornerRadiusTopStart="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:helperTextEnabled="true"
+                app:helperText="@string/sign_up_password_helper_text"
+                app:counterTextAppearance="@style/CounterText">
+
+                <com.madanes.myapp.views.CleanableTextInputEditText
+                    android:id="@+id/sign_up_password_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    app:cleanable_icon="@drawable/ic_close_black_24dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sign_up_email_til"
+                style="@style/MyApp.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="8dp"
+                android:hint="אימייל"
+                android:maxLines="1"
+                app:boxCornerRadiusTopStart="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:counterTextAppearance="@style/CounterText">
+
+                <com.madanes.myapp.views.CleanableTextInputEditText
+                    android:id="@+id/sign_up_email_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    app:cleanable_icon="@drawable/ic_close_black_24dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sign_up_phone_til"
+                style="@style/MyApp.TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="8dp"
+                android:hint="טלפון"
+                android:maxLines="1"
+                app:boxCornerRadiusTopStart="16dp"
+                app:counterEnabled="true"
+                app:counterMaxLength="100"
+                app:counterTextAppearance="@style/CounterText">
+
+                <com.madanes.myapp.views.CleanableTextInputEditText
+                    android:id="@+id/sign_up_phone_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    app:cleanable_icon="@drawable/ic_close_black_24dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sign_up_bttn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="שלח"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</com.google.android.material.internal.ForegroundLinearLayout>
+
+
+
+
